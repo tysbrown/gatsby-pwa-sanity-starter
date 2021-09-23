@@ -1,10 +1,10 @@
 {
   "root": true,
   "project": {
-    "name": "gatsby-sanity-sass"
+    "name": "gatsby-pwa-sanity-starter"
   },
   "api": {
-    "projectId": "0eukfy6n",
+    "projectId": "xxxxxxx",
     "dataset": "production"
   },
   "plugins": [

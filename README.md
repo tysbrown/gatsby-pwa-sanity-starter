@@ -1,8 +1,9 @@
-# Gatsby PWA & Sanity Starter
+<img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
 
+# Gatsby PWA & Sanity Starter &nbsp;⚛️&nbsp;🛠&nbsp;⚡️
 Gatsby front-end with [Sanity.io](https://sanity.io/) headless CMS.
 
-## Features
+## Features 🌟
 #### Sanity
   - Page Builder
   - Routing Schema
@@ -26,7 +27,7 @@ Gatsby front-end with [Sanity.io](https://sanity.io/) headless CMS.
     - Redirects Generator
   - Brotli Compression
   
-  ## Getting Up and Running
+  ## Getting Up and Running 🌟
   
   ### Get Fresh Project ID, API Token, and Dataset
   1. If you don't already have an account at [Sanity.io](https://sanity.io/), create one.
@@ -61,7 +62,7 @@ Gatsby front-end with [Sanity.io](https://sanity.io/) headless CMS.
   4. Deploy the Gatsby front-end to Netlify or Gatsby Cloud in the same manner, simply spin up a new Netlify instance and point it to the /gatsby directory of the project repo. Don't forget to update CORS origins and add a build webhook to [Sanity.io/manage](https://sanity.io/manage/).
   5. To build locally, run `gatsby build` in the /gatsby directory.
   
-  ## Using the Starter
+  ## Using the Starter 🌟
   
   ### Create New Sections
   Sections are Gatsby components that can be used in the page builder in Sanity

@@ -1,3 +1,5 @@
+<img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
+
 # Gatsby PWA & Sanity Starter &nbsp;⚛️&nbsp;🛠&nbsp;⚡️
 Gatsby front-end with [Sanity.io](https://sanity.io/) headless CMS.
 

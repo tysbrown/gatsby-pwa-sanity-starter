@@ -1,7 +1,7 @@
-<img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" />
+<div align="center"><img alt="Gatsby" src="https://www.gatsbyjs.com/Gatsby-Monogram.svg" width="60" /></div>
 
-# Gatsby PWA & Sanity Starter &nbsp;⚛️&nbsp;🛠&nbsp;⚡️
-Gatsby front-end with [Sanity.io](https://sanity.io/) headless CMS.
+# <p align="center">Gatsby PWA & Sanity Starter &nbsp;⚛️&nbsp;🛠&nbsp;⚡️</p>
+<p align="center">Gatsby front-end with [Sanity.io](https://sanity.io/) headless CMS.</p>
 
 ## Features 🌟
 #### Sanity

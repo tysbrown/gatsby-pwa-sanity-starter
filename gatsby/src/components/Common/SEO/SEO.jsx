@@ -7,7 +7,7 @@ import useDarkMode from '../../../hooks/useDarkMode';
 
 // Complete tutorial: https://www.gatsbyjs.org/docs/add-seo-component/
 
-const SEO = ({ title, desc, banner, schema, pathname, article, node }) => {
+const SEO = ({ title, desc, keywords, banner, schema, pathname, article, node }) => {
   const { site } = useStaticQuery(query);
 
   const {
@@ -39,8 +39,9 @@ const SEO = ({ title, desc, banner, schema, pathname, article, node }) => {
   const seo = {
     title: title || defaultTitle,
     description: desc || defaultDescription,
+    keywords,
     image: ogImage,
-    url: `${siteUrl}${pathname || ''}`,
+    url: `${siteUrl}/${pathname || ''}`,
   };
 
   // schema.org in JSONLD format
@@ -50,11 +51,12 @@ const SEO = ({ title, desc, banner, schema, pathname, article, node }) => {
   const schemaOrgWebPage = {
     '@context': 'http://schema.org',
     '@type': 'WebPage',
-    url: siteUrl,
+    url: seo.url,
     headline: seo.title,
     inLanguage: siteLanguage,
     mainEntityOfPage: siteUrl,
     description: seo.description,
+    keywords: keywords.join(', '),
     name: siteName,
     author: {
       '@type': 'Person',

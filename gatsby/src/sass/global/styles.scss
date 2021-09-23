@@ -7,3 +7,12 @@
 @import "fonts";
 @import "buttons";
 @import "typography";
+
+// Remove blue highlight around selections
+input,
+textarea,
+button,
+select,
+a {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}

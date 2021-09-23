@@ -1,7 +1,7 @@
 export default {
-  name: 'introSection',
-  title: 'Intro Section',
-  type: 'object',
+  name: "introSection",
+  title: "Intro Section",
+  type: "object",
   fields: [
     {
       name: `title`,
@@ -14,4 +14,9 @@ export default {
       type: `string`,
     },
   ],
-}
+  preview: {
+    select: {
+      title: "title",
+    },
+  },
+};

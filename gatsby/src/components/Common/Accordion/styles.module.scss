@@ -1,0 +1,71 @@
+.accordionSection {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #e0e0e0;
+  // Ensures borders aren't doubled up when accordion items are stacked
+  &:first-of-type {
+    border-top: 1px solid #e0e0e0;
+  }
+  .accordion {
+    background-color: $white;
+    border: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    outline: none;
+    padding: 16px 0;
+    // Title
+    .accordionTitle {
+      font-weight: 600;
+      font-size: 20px;
+      line-height: 24px;
+      text-align: left;
+    }
+    .accordionIcon {
+      margin-left: auto;
+      transition: transform 0.3s ease;
+    }
+  }
+  // BlockContent/body
+  .accordionContent {
+    overflow: auto;
+    // Accordion open animation
+    transition: max-height 0.3s ease, opacity 0.6s ease;
+    opacity: 0;
+    // Hide scrollbar during animation
+    -ms-overflow-style: none; // Edge
+    scrollbar-width: none; // Firefox
+    &::-webkit-scrollbar { // Chrome, Safari,
+      display: none;       // and Opera
+    }
+    // Sets padding inside returned block so it's factored into the element height state
+    p {
+      padding: 0 130px 16px 0;
+      @include media-down(large-tablet) {
+        padding-right: unset;
+      }
+    }
+  }
+}
+// Active state styling
+.active {
+  transition: opacity 0.6s ease;
+  opacity: 1 !important;
+}
+// Chevron rotate animation
+.rotate {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+// Remove above styling from specific elements
+// PostExchangeStatCard section
+:global(.statCardAccordion) {
+  .accordionSection {
+    .accordion {
+      .accordionTitle {
+        font-size: 14px !important;
+      }
+    }
+  }
+}

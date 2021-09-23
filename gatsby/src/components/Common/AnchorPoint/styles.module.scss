@@ -1,0 +1,24 @@
+.container {
+  max-width: 880px;
+  // margin: 40px auto 16px;
+  margin: 0 auto;
+  @include media-down(large-tablet) {
+    padding: 0 15px;
+  }
+  // Offset anchor tag to compensate for sticky header
+  .anchor {
+    display: block;
+    position: relative;
+    top: -70px;
+    visibility: hidden;
+    @include media-down(large-tablet) {
+      top: -110px;
+    }
+  }
+  h3 {
+    margin: 40px 0 16px;
+  }
+  h4 {
+    margin: 16px 0;
+  }
+}

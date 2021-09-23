@@ -1,15 +1,9 @@
 .header {
   padding: 14px 0;
-}
-
-.container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.nav {
-  .button {
-    padding: 5px 35px;
+  height: 90px;
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 }

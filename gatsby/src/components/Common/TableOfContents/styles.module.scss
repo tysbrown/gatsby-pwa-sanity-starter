@@ -1,0 +1,21 @@
+.section{
+  @include media-down(large-tablet) {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+  }
+  .anchorPoint {
+    margin: 12px 0 12px 4px;
+    font-size: 14px;
+    &:first-of-type {
+      margin-top: 24px;
+    }
+    a {
+      color: $black;
+    }
+  }
+  .nestedItem {
+    margin-left: 35px;
+  }
+}

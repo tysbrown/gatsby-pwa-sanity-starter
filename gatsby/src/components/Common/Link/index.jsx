@@ -41,7 +41,7 @@ const Link = (props) => {
 
   return (
     <GatsbyLink
-      to={linkTo}
+      to={linkTo === '/home/' ? '/' : linkTo}
       aria-label={ariaLabel || null}
       activeClassName={activeClassName}
       className={className || ''}

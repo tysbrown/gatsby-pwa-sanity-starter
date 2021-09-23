@@ -59,5 +59,9 @@ public/
 # Bundle stats
 bundle-stats.json
 
+# ENV
 .env.development
 .env.production
+
+# DS
+.DS_Store

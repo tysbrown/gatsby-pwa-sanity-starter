@@ -1,5 +1,5 @@
 import React from 'react';
-import './styles.scss';
+import * as styles from './styles.module.scss';
 
 const FormField = ({
   name,
@@ -12,6 +12,7 @@ const FormField = ({
   handleChange,
   register,
   validation,
+  className,
 }) => {
   if (type === 'textarea') {
     return (
@@ -22,12 +23,16 @@ const FormField = ({
         placeholder={placeholder}
         defaultValue={defaultValue}
         autoFocus={autoFocus}
+        className={className}
       />
     );
   }
   if (type === 'select') {
     return (
-      <select name={name} ref={register(validation)}>
+      <select name={name} ref={register(validation)} className={styles.customSelect}>
+        <option value="" disabled selected>
+          {placeholder}
+        </option>
         {options.map((option) => (
           <option value={option} defaultValue={defaultValue} key={option}>
             {option}
@@ -50,6 +55,7 @@ const FormField = ({
               value={option}
               defaultValue={defaultValue}
               onChange={handleChange}
+              className={className}
             />
             {type === 'checkbox' && (
               <svg viewBox="0 0 21 21">
@@ -71,6 +77,7 @@ const FormField = ({
       placeholder={placeholder}
       defaultValue={defaultValue}
       autoFocus={autoFocus}
+      className={className}
     />
   );
 };

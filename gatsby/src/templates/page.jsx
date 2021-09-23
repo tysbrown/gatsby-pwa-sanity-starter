@@ -1,11 +1,19 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { Layout, SanitySection } from 'components';
+import { Layout, SanitySection, GraphQLErrorList } from 'components';
 
-const Page = ({ location, data: staticData }) => {
+const Page = ({ location, data: staticData, errors }) => {
   const { sanityPage } = staticData;
-  const { sections: pageSections, seoDescription, seoKeywords } = sanityPage;
-  const seo = { seoDescription, seoKeywords };
+  const { sections: pageSections, title, seoDescription, seoKeywords, slug } = sanityPage;
+  const seo = { title, desc: seoDescription, keywords: seoKeywords, pathname: slug.current };
+
+  if (errors) {
+    return (
+      <Layout location={location} seo={seo}>
+        <GraphQLErrorList errors={errors} />;
+      </Layout>
+    );
+  }
 
   return (
     <Layout location={location} seo={seo}>
@@ -19,26 +27,17 @@ const Page = ({ location, data: staticData }) => {
 export default Page;
 
 export const query = graphql`
-  query Page($slug: String!) {
-    sanityPage(title: { eq: $slug }) {
+  query Page($id: String!) {
+    sanityPage(id: { eq: $id }) {
+      title
       seoDescription
       seoKeywords
-
+      slug {
+        current
+      }
       sections {
-        ... on SanityAnchorPoint {
-          _type
-          _key
-          title
-        }
-
-        #
-
-        ... on SanityIntroSection {
-          _type
-          _key
-          title
-          subtitle
-        }
+        ...IntroSectionData
+        ...PortableTextData
       }
     }
   }

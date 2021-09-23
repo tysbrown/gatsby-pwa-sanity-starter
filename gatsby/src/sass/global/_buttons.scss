@@ -1,10 +1,13 @@
 $buttons: (
-  "white": $white,
-  "black": $black,
-  "primary": $primary,
-  "secondary": $secondary,
-  "tertiary": $tertiary,
-  "highlight": $highlight
+  "primary" $primary $off-white,
+  "secondary" $secondary $off-white
+  "tertiary" $tertiary $off-white,
+  "highlight" $highlight $off-white,
+  "success" $success $off-white,
+  "warning" $warning $off-white,
+  "error" $error $off-white,
+  "white" $white $textcolor,
+  "black" $black $off-white,
 );
 
 .button {
@@ -27,13 +30,20 @@ $buttons: (
     border-color: darken($primary, 5%);
     text-decoration: none;
   }
-  @each $name, $color in $buttons {
+  @each $name, $buttonColor, $color in $buttons {
     &.#{$name} {
-      background: $color;
-      border-color: $color;
+      background: $buttonColor;
+      @if $name == "white" {
+        border-color: $color;
+      } @else {
+        border-color: $buttonColor;
+      }
+      color: $color;
       &:hover {
-        background: darken($color, 5%);
-        border-color: darken($color, 5%);
+        background: darken($buttonColor, 5%);
+        @if $name != "white" {
+          border-color: darken($buttonColor, 5%);
+        }
       }
     }
   }

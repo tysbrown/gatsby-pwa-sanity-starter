@@ -4,7 +4,7 @@
     "name": "gatsby-sanity-sass"
   },
   "api": {
-    "projectId": "kc6ijywj",
+    "projectId": "0eukfy6n",
     "dataset": "production"
   },
   "plugins": [
@@ -12,7 +12,9 @@
     "@sanity/components",
     "@sanity/default-layout",
     "@sanity/default-login",
-    "@sanity/desk-tool"
+    "@sanity/desk-tool",
+    "media",
+    "@sanity/color-input"
   ],
   "env": {
     "development": {
@@ -25,6 +27,10 @@
     {
       "name": "part:@sanity/base/schema",
       "path": "./schemas/schema"
+    },
+    {
+      "name": "part:@sanity/desk-tool/structure",
+      "path": "./sanity-structure.js"
     }
   ]
 }

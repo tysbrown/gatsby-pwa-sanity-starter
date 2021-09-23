@@ -4,15 +4,15 @@
 
 // Font weight variables
 // NOTE: Use 400 and 700 weights only
-// $font-weight-thin: 100;
-// $font-weight-extra-light: 200;
-// $font-weight-light: 300;
+$font-weight-thin: 100;
+$font-weight-extra-light: 200;
+$font-weight-light: 300;
 $font-weight-regular: 400;
-// $font-weight-medium: 500;
-// $font-weight-semi-bold: 600;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
 $font-weight-bold: 700;
-// $font-weight-extra-bold: 800;
-// $font-weight-black: 900;
+$font-weight-extra-bold: 800;
+$font-weight-black: 900;
 
 
 @mixin heading-font() {
@@ -29,7 +29,6 @@ $font-weight-bold: 700;
     font-size: 14px;
   }
 }
-
 @mixin h1 {
   @include heading-font();
   font-size: 35px;

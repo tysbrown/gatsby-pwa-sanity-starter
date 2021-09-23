@@ -8,10 +8,11 @@ body {
   text-align: left;
   word-wrap: break-word;
   text-rendering: optimizeLegibility;
-  font-smoothing: antialiased;
+  font-smooth: antialiased;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: antialiased;
   text-shadow: 0 0 1px transparent;
 }
-
 
 // --------------------------------------------------------------------------
 //   Headings
@@ -32,17 +33,30 @@ h5,
 h6 {
   @include heading-font();
   line-height: 1.2em;
+  margin-bottom: 20px;
   &:first-child {
     margin-top: 0;
   }
 }
 
-h1 { @include h1; }
-h2 { @include h2; }
-h3 { @include h3; }
-h4 { @include h4; }
-h5 { @include h5; }
-h6 { font-size: 14px; }
+h1 {
+  @include h1;
+}
+h2 {
+  @include h2;
+}
+h3 {
+  @include h3;
+}
+h4 {
+  @include h4;
+}
+h5 {
+  @include h5;
+}
+h6 {
+  font-size: 14px;
+}
 
 // --------------------------------------------------------------------------
 //   Content Elements

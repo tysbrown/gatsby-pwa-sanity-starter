@@ -1,52 +1,53 @@
+import { BsPuzzleFill } from "react-icons/bs";
 export default {
-  name: `page`,
-  title: `Page`,
-  type: `document`,
+  name: "page",
+  title: "Page",
+  type: "document",
   fields: [
     {
-      name: `title`,
-      title: `Title`,
-      type: `string`,
+      name: "title",
+      title: "Title",
+      type: "string",
     },
     {
-      name: `subtitle`,
-      title: `Subtitle`,
-      type: `string`,
+      name: "seoDescription",
+      title: "SEO Description",
+      type: "text",
+      description: "Passed to page's JSONLD markup."
     },
     {
-      name: `slug`,
-      title: `URL`,
-      type: `slug`,
-      options: {
-        source: `title`
-      }
-    },
-    {
-      name: `sections`,
-      title: `Sections`,
-      type: `array`,
-      of: [
-        { type: `anchorPoint`},
-        { type: `introSection` },
-      ]
-    },
-    {
-      name: `seoDescription`,
-      title: `SEO Description`,
-      type: `string`
-    },
-    {
-      name: `seoKeywords`,
-      title: `SEO Keywords`,
-      type: `array`,
+      name: "seoKeywords",
+      title: "SEO Keywords",
+      type: "array",
       of: [
         {
-          type: `string`
-        }
+          type: "string",
+        },
       ],
       options: {
-        layout: `tags`
-      }
-    }
-  ]
+        layout: "tags",
+      },
+      description: "Passed to page's JSONLD markup.",
+    },
+    {
+      name: "slug",
+      title: "Slug",
+      type: "slug",
+      options: {
+        source: "title",
+      },
+      description: "Slug MUST be set to render page on front-end.",
+      validation: Rule => Rule.required(),
+    },
+    {
+      name: "sections",
+      title: "Sections",
+      type: "array",
+      description: "Page Builder",
+      of: [
+        { type: "introSection", icon: BsPuzzleFill },
+        { type: "portableText", icon: BsPuzzleFill },
+      ],
+    },
+  ],
 };

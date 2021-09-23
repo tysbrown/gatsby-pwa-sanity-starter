@@ -15,6 +15,7 @@ Gatsby front-end with [Sanity.io](https://sanity.io/) headless CMS.
     - Offline Support
     - Web App Manifest Support
   - SEO
+    - Perfect 100 Lighthouse Scores
     - Schema.org JSON-LD Markup
     - Sitemap
     - Canonical Tags

@@ -11,10 +11,22 @@ export default {
       type: "string",
     },
     {
+      name: "isExternal",
+      title: "Link to an external page",
+      type: "boolean",
+    },
+    {
+      name: "url",
+      title: "External URL",
+      type: "url",
+      hidden: ({ parent }) => !parent?.isExternal,
+    },
+    {
       title: "Page",
       name: "page",
       type: "reference",
       to: [{ type: "page" }],
+      hidden: ({ parent, value }) => !value && parent?.isExternal,
     },
   ],
 };

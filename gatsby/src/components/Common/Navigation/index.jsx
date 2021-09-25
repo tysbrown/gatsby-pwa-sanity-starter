@@ -35,7 +35,8 @@ const Navigation = (props) => {
                     {navItem.isLink ? (
                       /* Title is a link, render it in Link comp */
                       <Link
-                        to={`/${navItem?.linkTo?.slug?.current}/`}
+                        /* IF isExternal is toggled pass url to Link comp instead */
+                        to={`${navItem.isExternal ? navItem?.url : `/${navItem?.linkTo?.slug?.current}/`}`}
                         className={styles.navLink}
                         activeClassName={styles.active}
                       >
@@ -53,9 +54,11 @@ const Navigation = (props) => {
                     <ul className={styles.dropdownNavItems}>
                       {navItem?.dropdownChildren?.map((dropdownItem) => (
                         <li key={dropdownItem?._key} className={styles.dropdownLinkWrapper}>
-                          {/* Change this to a UL element after getting it working */}
+                          {/* If isExternal is toggled pass url to Link comp instead */}
                           <Link
-                            to={`/${dropdownItem?.page?.slug?.current}/`}
+                            to={`${
+                              dropdownItem.isExternal ? dropdownItem?.url : `/${dropdownItem?.page?.slug?.current}/`
+                            }`}
                             className={styles.dropdownLink}
                             activeClassName={styles.active}
                           >
@@ -73,7 +76,7 @@ const Navigation = (props) => {
               /* Current navItem is a singleton */
               <li key={navItem?._key}>
                 <Link
-                  /* If current navItem is toggled as external, pass url to Link */
+                  /* If isExternal is toggled pass url to Link comp instead */
                   to={`${navItem.isExternal ? navItem?.url : `/${navItem?.linkTo?.slug?.current}/`}`}
                   className={`${navItem.isBtn ? `button ${navItem.btnType}` : styles.navLink}`}
                   activeClassName={styles.active}

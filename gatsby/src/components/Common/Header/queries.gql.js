@@ -9,6 +9,8 @@ export const Queries = graphql`
           _type
           title
           isLink
+          isExternal
+          url
           linkTo {
             ... on SanityPage {
               id
@@ -20,6 +22,8 @@ export const Queries = graphql`
           dropdownChildren {
             _key
             title
+            isExternal
+            url
             page {
               ... on SanityPage {
                 id

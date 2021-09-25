@@ -73,7 +73,8 @@ const Navigation = (props) => {
               /* Current navItem is a singleton */
               <li key={navItem?._key}>
                 <Link
-                  to={`/${navItem?.linkTo?.slug?.current}/`}
+                  /* If current navItem is toggled as external, pass url to Link */
+                  to={`${navItem.isExternal ? navItem?.url : `/${navItem?.linkTo?.slug?.current}/`}`}
                   className={`${navItem.isBtn ? `button ${navItem.btnType}` : styles.navLink}`}
                   activeClassName={styles.active}
                 >

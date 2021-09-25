@@ -9,11 +9,6 @@ export default {
       type: "string",
     },
     {
-      name: "isNewTab",
-      title: "Open in new tab",
-      type: "boolean",
-    },
-    {
       name: "isBtn",
       title: "Style as a button",
       type: "boolean",
@@ -38,10 +33,23 @@ export default {
       hidden: ({ parent }) => !parent?.isBtn,
     },
     {
+      name: "isExternal",
+      title: "Link to an external page",
+      type: "boolean",
+      hidden: ({ parent, value }) => !value && parent?.linkTo
+    },
+    {
+      name: "url",
+      title: "External URL",
+      type: "url",
+      hidden: ({ parent }) => !parent?.isExternal,
+    },
+    {
       name: "linkTo",
       title: "Link To",
       type: "reference",
       to: [{ type: "page" }],
+      hidden: ({ parent, value }) => !value && parent?.isExternal
     },
   ],
 };

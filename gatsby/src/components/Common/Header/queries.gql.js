@@ -34,9 +34,10 @@ export const Queries = graphql`
           _key
           _type
           title
-          isNewTab
           isBtn
           btnType
+          isExternal
+          url
           linkTo {
             ... on SanityPage {
               id

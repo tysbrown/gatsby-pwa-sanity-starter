@@ -77,5 +77,5 @@ Gatsby front-end with [Sanity.io](https://sanity.io/) headless CMS.
   ### Routing Schema
   The routing schema is all set up in Sanity inside the `Routing` tab. The header navigation data is fetched from the `Header` component and consumed by the `Navigation` component. A similar setup can be used for the footer navigation data and `Footer` component.
   
-  Inside the `Routing` tab of the Sanity Studio you have the ability to add both singleton and dropdown items to the header and singletons and social media items to the footer. Header items can be toggled to open in a new tab and/or toggled to be styled as a button (the color of which you can select from a list).
+  Inside the `Routing` tab of the Sanity Studio you have the ability to add both singleton and dropdown items to the header and singletons and social media items to the footer. Header items can be toggled to be external addresses and/or toggled to be styled as a button (the color of which you can select from a list).
  

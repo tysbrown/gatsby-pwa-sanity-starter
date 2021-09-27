@@ -49,7 +49,7 @@ const BlockContent = ({ data, className }) => {
       const bullet = type === 'bullet';
 
       if (bullet) {
-        return <ul className={hasContainer ? '' : className}>{children}</ul>;
+        return <ul className={`${styles.ul} ${hasContainer ? '' : className}`}>{children}</ul>;
       }
 
       return <ol>{children}</ol>;

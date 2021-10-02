@@ -63,6 +63,15 @@ p {
   font-weight: 600;
 }
 
+.ul {
+    li {
+      margin-left: 20px;
+      margin-bottom: 10px;
+      padding-left: 5px;
+      list-style-type: disc;
+    }
+}
+
 .imageWrapper {
   max-width: 880px;
   width: fit-content;

@@ -1,10 +1,10 @@
 {
-  "name": "gatsbysanitysass",
+  "name": "gatsbypwasanitystarter",
   "private": true,
   "version": "1.0.0",
   "description": "",
   "main": "package.json",
-  "author": "Woolly Mammoth <hey@mammoth.tech>",
+  "author": "Tyler Brown",
   "license": "UNLICENSED",
   "scripts": {
     "start": "sanity start",
@@ -32,6 +32,6 @@
   "devDependencies": {},
   "repository": {
     "type": "git",
-    "url": "git@github.com:Woolly-Mammoth/gatsby-sanity-sass.git"
+    "url": "git@github.com:tysbrown/gatsby-pwa-sanity-starter.git"
   }
 }

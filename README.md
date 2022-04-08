@@ -1,6 +1,6 @@
 <img alt="Gatsby" src="./gatsby/src/images/gatsby.svg" width="60" />&nbsp;<img alt="Sanity" src="./gatsby/src/images/sanity.svg" width="60" />
 
-# Gatsby PWA & Sanity Starter &nbsp;⚛️&nbsp;🛠&nbsp;⚡️
+# Gatsby PWA & Sanity Starter &nbsp;⚛️&nbsp;🛠
 Gatsby front-end with [Sanity.io](https://sanity.io/) headless CMS.
 
 ## Features 🌟
